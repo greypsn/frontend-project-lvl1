@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
+
 import resdlineSync from 'readline-sync';
 console.log('Welcome to the Brain Games');
 const name = resdlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
+
 console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
 for (let i = 0; i < 3; i++){
     const number = getRandomInt(30);

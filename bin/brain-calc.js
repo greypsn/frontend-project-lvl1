@@ -1,10 +1,6 @@
 #!/usr/bin/env node
-
 import resdlineSync from 'readline-sync';
-
-console.log('Welcome to the Brain Games');
-const name = resdlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
+import {name, getRandomInt} from '../src/cli.js';
 
 console.log(`What is the result of the expression?`);
 for (let i = 0; i < 3; i++){
@@ -39,8 +35,3 @@ for (let i = 0; i < 3; i++){
             break;
         }
 }
-
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }

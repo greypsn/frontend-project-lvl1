@@ -1,10 +1,6 @@
 #!/usr/bin/env node
-
 import resdlineSync from 'readline-sync';
-
-console.log('Welcome to the Brain Games');
-const name = resdlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
+import {name, getRandomInt, nod} from '../src/cli.js';
 
 console.log(`Find the greatest common divisor of given numbers.`);
 for (let i = 0; i < 3; i++){
@@ -27,14 +23,4 @@ for (let i = 0; i < 3; i++){
             console.log(`Let's try again, ${name}`);
             break;
         }
-}
-
-function nod (x, y) {
-	if (y > x) return nod(y, x);
-	if (!y) return x;
-	return nod(y, x % y);
-}
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
 }

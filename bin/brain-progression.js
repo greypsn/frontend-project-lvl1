@@ -14,7 +14,7 @@ for (let i = 0; i < 3; i++){
         if (i === t){
             progression += `.. `;
             correctAnswer = startPoint + shiftPoint + d*i;
-            console.log('ПРОВЕРКА: ' + correctAnswer);
+            //console.log('ПРОВЕРКА: ' + correctAnswer);
         }else{
             progression += `${startPoint + shiftPoint + d*i} `;
         }

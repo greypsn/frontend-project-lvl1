@@ -5,7 +5,7 @@ const name = resdlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * (max - 1)) + 1;
 }
 
 function nod (x, y) {

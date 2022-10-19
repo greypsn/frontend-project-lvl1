@@ -1,4 +1,4 @@
-import { getRandomNum, isPrime } from "../util.js";
+import { getRandomNum, isPrime } from '../util.js';
 import run from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';

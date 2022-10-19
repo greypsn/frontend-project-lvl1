@@ -1,7 +1,7 @@
 import { getRandomNum, isPrime } from "../util.js";
 import run from '../index.js';
 
-const rules = 'Answer "yes" if the number is prime, otherwise answer "no".';
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
   const num = getRandomNum(0, 10);

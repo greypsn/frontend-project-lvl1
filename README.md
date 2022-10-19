@@ -1,5 +1,6 @@
 ## Brain Games Class Project
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/e336ea538803876abe5c/maintainability)](https://codeclimate.com/github/greypsn/frontend-project-lvl1/maintainability)
 [![Actions Status](https://github.com/greypsn/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/greypsn/frontend-project-lvl1/actions)
 
 ### Серия консольных игр Brain Games.

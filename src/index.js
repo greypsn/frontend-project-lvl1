@@ -1,13 +1,16 @@
 import readlineSync from 'readline-sync';
-import welcome from './cli.js';
 
-const run = (rules, getQuestionAndAnswer) => {
-  const name = welcome();
-  const numberOfTrials = 3;
+// Количество попыток
+const numberOfTrials = 3;
+
+const runEngine = (rules, generateRound) => {
+  console.info('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.info(`Hello, ${name}!`);
   let roundsLeft = numberOfTrials;
   console.info(rules);
-  while (roundsLeft > 0) {
-    const { question, correctAnswer } = getQuestionAndAnswer();
+  for (; numberOfTrials > 0; roundsLeft -= 1) {
+    const { question, correctAnswer } = generateRound();
     console.info(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
@@ -17,9 +20,8 @@ const run = (rules, getQuestionAndAnswer) => {
       console.info(`Let's try again, ${name}!`);
       return;
     }
-    roundsLeft -= 1;
   }
   console.info(`Congratulations, ${name}!`);
 };
 
-export default run;
+export default runEngine;

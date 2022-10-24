@@ -9,7 +9,7 @@ const runEngine = (rules, generateRound) => {
   console.info(`Hello, ${name}!`);
   let roundsLeft = numberOfTrials;
   console.info(rules);
-  for (; numberOfTrials > 0; roundsLeft -= 1) {
+  for (; roundsLeft > 0; roundsLeft -= 1) {
     const { question, correctAnswer } = generateRound();
     console.info(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

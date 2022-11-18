@@ -7,9 +7,8 @@ const runEngine = (rules, generateRound) => {
   console.info('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.info(`Hello, ${name}!`);
-  let roundsLeft = numberOfTrials;
   console.info(rules);
-  for (; roundsLeft > 0; roundsLeft -= 1) {
+  for (let i = 0; i < numberOfTrials; i += 1) {
     const { question, correctAnswer } = generateRound();
     console.info(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
